@@ -257,13 +257,15 @@ const styles = StyleSheet.create({
   },
 
   mainContent: {
-    flexDirection: "row",
+    // flexDirection: "row",
+    flexDirection: "column",
     gap: 18,
     alignItems: "flex-start",
   },
 
   profileCard: {
-    width: "50%",
+    // width: 250,
+    width: "100%",
     backgroundColor: COLORS.card,
     borderWidth: 2,
     borderColor: COLORS.border,
@@ -327,7 +329,8 @@ const styles = StyleSheet.create({
   },
 
   rightSide: {
-    flex: 1,
+    // flex: 1,
+    width: "100%",
   },
 
   section: {
