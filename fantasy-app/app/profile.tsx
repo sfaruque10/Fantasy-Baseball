@@ -1,17 +1,17 @@
+import AsyncStorage from "@react-native-async-storage/async-storage";
+import { useRouter } from "expo-router";
 import React, { useEffect, useState } from "react";
 import {
+  ActivityIndicator,
   ScrollView,
-  View,
+  StyleSheet,
   Text,
   TouchableOpacity,
-  ActivityIndicator,
-  StyleSheet,
+  View,
 } from "react-native";
-import { useRouter } from "expo-router";
-import AsyncStorage from "@react-native-async-storage/async-storage";
+import { COLORS, TYPOGRAPHY } from "../constants/theme";
 import API from "../services/api";
 import { getUserTeams } from "../services/user";
-import { COLORS, TYPOGRAPHY } from "../constants/theme";
 import Navbar from "./navbar";
 
 export default function ProfilePage() {
@@ -263,7 +263,7 @@ const styles = StyleSheet.create({
   },
 
   profileCard: {
-    width: 250,
+    width: "100%",
     backgroundColor: COLORS.card,
     borderWidth: 2,
     borderColor: COLORS.border,
