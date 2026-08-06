@@ -1,6 +1,6 @@
 import { router } from "expo-router";
 
-import { TouchableOpacity, Text, View, StyleSheet } from "react-native";
+import { StyleSheet, Text, TouchableOpacity, View } from "react-native";
 
 import { COLORS, TYPOGRAPHY } from "../constants/theme";
 
@@ -42,7 +42,8 @@ const styles = StyleSheet.create({
   },
 
   card: {
-    width: 500,
+    width: "100%",
+    // width: 500,
     backgroundColor: COLORS.card,
     borderWidth: 2,
     borderColor: COLORS.border,
