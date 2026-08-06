@@ -263,7 +263,7 @@ const styles = StyleSheet.create({
   },
 
   profileCard: {
-    width: "100%",
+    width: "50%",
     backgroundColor: COLORS.card,
     borderWidth: 2,
     borderColor: COLORS.border,
