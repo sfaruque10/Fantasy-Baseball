@@ -42,8 +42,9 @@ const styles = StyleSheet.create({
   },
 
   card: {
-    width: "100%",
-    // width: 500,
+    // width: 500, // web
+    // width: "100%" // mobile
+    width: "auto", // both
     backgroundColor: COLORS.card,
     borderWidth: 2,
     borderColor: COLORS.border,

@@ -3,6 +3,7 @@ import { useRouter } from "expo-router";
 import React, { useEffect, useState } from "react";
 import {
   ActivityIndicator,
+  Dimensions,
   ScrollView,
   StyleSheet,
   Text,
@@ -227,6 +228,9 @@ export default function ProfilePage() {
   );
 }
 
+const { width: SCREEN_WIDTH } = Dimensions.get("window");
+const isMobile = SCREEN_WIDTH < 768;
+
 const styles = StyleSheet.create({
   page: {
     flex: 1,
@@ -257,15 +261,17 @@ const styles = StyleSheet.create({
   },
 
   mainContent: {
-    // flexDirection: "row",
-    flexDirection: "column",
+    // flexDirection: "row", //web
+    // flexDirection: "column", //mobile
+    flexDirection: isMobile ? "column" : "row", // both
     gap: 18,
     alignItems: "flex-start",
   },
 
   profileCard: {
-    // width: 250,
-    width: "100%",
+    // width: 250, // when doing web
+    // width: "100%", // when doing mobile
+    width: isMobile ? "100%" : 280, // both
     backgroundColor: COLORS.card,
     borderWidth: 2,
     borderColor: COLORS.border,
@@ -329,8 +335,9 @@ const styles = StyleSheet.create({
   },
 
   rightSide: {
-    // flex: 1,
-    width: "100%",
+    flex: 1,
+    // width: "50%", // mobile
+    width: isMobile ? "100%" : "auto",
   },
 
   section: {
